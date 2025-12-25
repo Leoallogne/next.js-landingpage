@@ -83,12 +83,14 @@ export function Navbar() {
                                 </Link>
                             ))}
                         </div>
-                        <Link href="/contact">
-                            <Button variant="premium" size="sm" className="gap-2 group">
-                                Contact Us
-                                <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
-                            </Button>
-                        </Link>
+                        {/* Desktop CTA */}
+                        <div className="hidden md:block">
+                            <Link href="/contact">
+                                <Button variant="premium" className="rounded-full px-6 shadow-blue-500/20">
+                                    Get Proposal
+                                </Button>
+                            </Link>
+                        </div>
                     </div>
 
                     {/* Mobile Toggle */}

@@ -17,9 +17,31 @@ const outfit = Outfit({
 });
 
 export const metadata: Metadata = {
-  title: "NexCorp | Premium Corporate Solutions",
-  description: "Leading the future of enterprise technology with innovative solutions. We help businesses scale and succeed in the digital age.",
-  keywords: ["corporate", "enterprise", "technology", "consulting", "premium", "software"],
+  title: "NexCorp | Enterprise Digital Transformation & Consulting",
+  description: "Accelerate your business growth with NexCorp. We reduce operational costs by up to 30% and speed up deployment through premium digital infrastructure consulting.",
+  keywords: ["enterprise", "technololgy consulting", "digital transformation", "cost reduction", "software architecture", "scalability"],
+  openGraph: {
+    type: "website",
+    locale: "en_US",
+    url: "https://nexcorp.demo",
+    siteName: "NexCorp Enterprise",
+    title: "NexCorp | Enterprise Digital Transformation",
+    description: "Accelerate your business growth. Reduce operational costs by up to 30% with data-driven infrastructure.",
+    images: [
+      {
+        url: "/og-image.jpg",
+        width: 1200,
+        height: 630,
+        alt: "NexCorp Enterprise Dashboard",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "NexCorp | Enterprise Digital Transformation",
+    description: "Accelerate your business growth. Reduce operational costs by up to 30% with data-driven infrastructure.",
+    creator: "@nexcorp",
+  },
 };
 
 export default function RootLayout({
