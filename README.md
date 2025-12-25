@@ -1,36 +1,86 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# NexCorp - Premium Corporate Website
 
-## Getting Started
+A high-performance, SEO-optimized, and premium corporate portfolio website built with Next.js 14, Tailwind CSS, and Framer Motion. This project is designed to represent a modern enterprise service provider, featuring smooth animations, a dark-themed aesthetic, and a fully responsive layout.
 
-First, run the development server:
+## 🚀 Features
+
+-   **Modern Tech Stack:** Next.js 14 (App Router), TypeScript, Tailwind CSS v4.
+-   **Premium UI/UX:** Glassmorphism, smooth scroll animations, and interactive elements.
+-   **Animations:** Powered by `framer-motion` for complex entering and scroll-based animations.
+-   **Responsive:** Fully optimized for Mobile, Tablet, and Desktop.
+-   **Performance:** SEO-ready structure, optimized images (placeholders used), and fast loading times.
+-   **Icons:** Using `lucide-react` for consistent iconography.
+
+## 🛠️ Project Structure
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+/src
+  /app          # Next.js App Router (Pages & Layout)
+  /components
+    /ui         # Reusable atomic components (Button, etc.)
+    /layout     # Global layout components (Navbar, Footer)
+    /sections   # Feature-specific sections (Hero, About, etc.)
+  /lib          # Utils and helper functions
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 📦 Getting Started
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### Prerequisites
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+-   Node.js 18+ installed.
+-   npm or yarn or pnpm.
 
-## Learn More
+### Installation
 
-To learn more about Next.js, take a look at the following resources:
+1.  **Clone the repository:**
+    ```bash
+    git clone https://github.com/yourusername/premium-corporate-site.git
+    cd premium-corporate-site
+    ```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+2.  **Install dependencies:**
+    ```bash
+    npm install
+    ```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+3.  **Run Development Server:**
+    ```bash
+    npm run dev
+    ```
+    Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-## Deploy on Vercel
+4.  **Build for Production:**
+    ```bash
+    npm run build
+    npm start
+    ```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## 🌐 Deployment Guide
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+### Vercel (Recommended)
+
+1.  Push your code to a Git repository (GitHub, GitLab, Bitbucket).
+2.  Go to [Vercel](https://vercel.com) and sign in.
+3.  Click **"Add New Project"** and import your repository.
+4.  Vercel will detect Next.js automatically.
+5.  Click **"Deploy"**.
+6.  Your site will be live in less than a minute!
+
+### Netlify
+
+1.  Push your code to a Git repository.
+2.  Go to [Netlify](https://www.netlify.com) and sign in.
+3.  Click **"Add new site"** -> **"Import an existing project"**.
+4.  Select your repository.
+5.  **Build Command:** `npm run build`
+6.  **Publish Directory:** `.next` (Netlify usually auto-detects Next.js via plugin, otherwise use the Next.js runtime).
+7.  Click **"Deploy"**.
+
+## 🎨 Customization
+
+-   **Colors & Fonts:** Edit `src/app/globals.css` to change the CSS variables for colors and fonts.
+-   **Content:** Edit the content arrays in each component file in `src/components/sections/`.
+
+## 📄 License
+
+This project is open source and available under the [MIT License](LICENSE).
