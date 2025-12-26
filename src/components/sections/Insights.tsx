@@ -44,18 +44,18 @@ const articles = [
 
 // --- Components ---
 
-function ArticleCard({ article }: { article: typeof articles[0] }) {
+function ArticleCard({ article, index }: { article: typeof articles[0]; index: number }) {
     const ref = useRef<HTMLDivElement>(null);
 
     return (
         <motion.div
             ref={ref}
-            initial={{ opacity: 0, y: 30 }}
+            initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: "-50px" }}
-            transition={{ duration: 0.5, ease: "easeOut" }}
-            whileHover={{ y: -8, scale: 1.01 }}
-            className={`group relative overflow-hidden rounded-[2rem] border border-white/10 bg-neutral-900/50 backdrop-blur-md ${article.className} shadow-2xl transition-all duration-300 hover:shadow-blue-900/20`}
+            transition={{ duration: 0.8, delay: index * 0.15, ease: [0.25, 0.1, 0.25, 1.0] }}
+            whileHover={{ y: -12, scale: 1.02, transition: { duration: 0.4, ease: "easeOut" } }}
+            className={`group relative overflow-hidden rounded-[2rem] border border-white/10 bg-neutral-900/50 backdrop-blur-md ${article.className} shadow-2xl transition-all duration-500 hover:shadow-blue-900/20`}
         >
             {/* Image Background */}
             <div className="absolute inset-0 z-0 bg-neutral-900">
@@ -154,8 +154,8 @@ export function Insights() {
 
                 {/* Bento Grid */}
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-6 auto-rows-[minmax(300px,auto)]">
-                    {articles.map((article) => (
-                        <ArticleCard key={article.id} article={article} />
+                    {articles.map((article, i) => (
+                        <ArticleCard key={article.id} article={article} index={i} />
                     ))}
                 </div>
             </div>

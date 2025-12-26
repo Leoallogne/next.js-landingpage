@@ -78,7 +78,7 @@ function JobAccordion({ job, isOpen, onClick }: { job: typeof jobs[0], isOpen: b
             <motion.div
                 initial={false}
                 animate={{ height: isOpen ? "auto" : 0, opacity: isOpen ? 1 : 0 }}
-                transition={{ duration: 0.3 }}
+                transition={{ duration: 0.5, ease: [0.25, 0.1, 0.25, 1.0] }}
                 className="overflow-hidden"
             >
                 <div className="pb-8 px-4 pt-2">
@@ -128,13 +128,14 @@ export function Careers() {
                             {values.map((val, i) => (
                                 <motion.div
                                     key={i}
-                                    initial={{ opacity: 0, y: 20 }}
+                                    initial={{ opacity: 0, y: 30 }}
                                     whileInView={{ opacity: 1, y: 0 }}
                                     viewport={{ once: true }}
-                                    transition={{ delay: 0.3 + (i * 0.1) }}
-                                    className="p-6 rounded-2xl bg-white/5 border border-white/5 hover:border-white/10 transition-colors"
+                                    transition={{ delay: 0.3 + (i * 0.15), duration: 0.8, ease: [0.25, 0.1, 0.25, 1.0] }}
+                                    whileHover={{ y: -8, scale: 1.02, transition: { duration: 0.4, ease: "easeOut" } }}
+                                    className="p-6 rounded-2xl bg-white/5 border border-white/5 hover:border-white/10 transition-colors shadow-lg hover:shadow-purple-900/10"
                                 >
-                                    <div className="mb-4">{val.icon}</div>
+                                    <div className="mb-4 transform group-hover:scale-110 transition-transform duration-500">{val.icon}</div>
                                     <h3 className="font-bold text-white mb-2">{val.title}</h3>
                                     <p className="text-sm text-neutral-400">{val.description}</p>
                                 </motion.div>

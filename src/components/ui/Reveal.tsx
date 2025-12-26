@@ -17,7 +17,7 @@ export const Reveal = ({
     width = "fit-content",
     delay = 0.25,
     direction = "up",
-    duration = 0.5,
+    duration = 0.7,
     className = ""
 }: RevealProps) => {
     const ref = useRef(null);
@@ -66,7 +66,7 @@ export const Reveal = ({
                 variants={getVariants()}
                 initial="hidden"
                 animate={mainControls}
-                transition={{ duration, delay, ease: "easeOut" }}
+                transition={{ duration, delay, ease: [0.25, 0.1, 0.25, 1.0] }}
             >
                 {children}
             </motion.div>
