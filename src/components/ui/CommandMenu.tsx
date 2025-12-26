@@ -58,6 +58,20 @@ export function CommandMenu() {
                                 <span>Home</span>
                             </Command.Item>
                             <Command.Item
+                                onSelect={() => runCommand(() => router.push("/#insights"))}
+                                className="flex items-center px-2 py-2 rounded-lg cursor-pointer text-sm text-foreground aria-selected:bg-primary/20 aria-selected:text-primary transition-colors"
+                            >
+                                <FileText className="mr-2 h-4 w-4" />
+                                <span>Insights</span>
+                            </Command.Item>
+                            <Command.Item
+                                onSelect={() => runCommand(() => router.push("/#careers"))}
+                                className="flex items-center px-2 py-2 rounded-lg cursor-pointer text-sm text-foreground aria-selected:bg-primary/20 aria-selected:text-primary transition-colors"
+                            >
+                                <ArrowRight className="mr-2 h-4 w-4" />
+                                <span>Careers</span>
+                            </Command.Item>
+                            <Command.Item
                                 onSelect={() => runCommand(() => router.push("/contact"))}
                                 className="flex items-center px-2 py-2 rounded-lg cursor-pointer text-sm text-foreground aria-selected:bg-primary/20 aria-selected:text-primary transition-colors"
                             >
@@ -65,6 +79,7 @@ export function CommandMenu() {
                                 <span>Contact Us</span>
                             </Command.Item>
                         </Command.Group>
+
 
                         <Command.Group heading="Services" className="px-2 py-1.5 text-xs font-medium text-muted-foreground mt-2">
                             <Command.Item

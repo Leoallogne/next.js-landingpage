@@ -7,6 +7,8 @@ import { WhyUs } from "@/components/sections/WhyUs";
 import { CaseStudies } from "@/components/sections/CaseStudies";
 import { Testimonials } from "@/components/sections/Testimonials";
 import { Contact } from "@/components/sections/Contact";
+import { Insights } from "@/components/sections/Insights";
+import { Careers } from "@/components/sections/Careers";
 
 export default function Home() {
   return (
@@ -17,6 +19,8 @@ export default function Home() {
       <Services />
       <WhyUs />
       <CaseStudies />
+      <Insights />
+      <Careers />
       <Testimonials />
       <Contact />
       <Footer />
